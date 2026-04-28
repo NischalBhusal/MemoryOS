@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = { file = "LICENSE" }
 authors = [
-  { name = "MemoryOS Contributors" }
+  { name = "memoryos Contributors" }
 ]
 keywords = ["ai", "memory", "llm", "local", "offline", "sqlite", "embeddings", "rag"]
 classifiers = [
@@ -33,10 +33,10 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/your-org/memoryos"
-Repository = "https://github.com/your-org/memoryos"
-"Bug Tracker" = "https://github.com/your-org/memoryos/issues"
-Changelog = "https://github.com/your-org/memoryos/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/NischalBhusal/MemoryOS"
+Repository = "https://github.com/NischalBhusal/MemoryOS"
+"Bug Tracker" = "https://github.com/NischalBhusal/MemoryOS/issues"
+Changelog = "https://github.com/NischalBhusal/MemoryOS/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
 dev = [
