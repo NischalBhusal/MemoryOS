@@ -5,7 +5,6 @@
 [![PyPI version](https://badge.fury.io/py/memoryos.svg)](https://badge.fury.io/py/memoryos)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![CI](https://github.com/your-org/memoryos/actions/workflows/ci.yml/badge.svg)](https://github.com/your-org/memoryos/actions)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 
 **Persistent, semantic, long-term memory for any LLM app — 100% local, 100% free, zero setup.**
