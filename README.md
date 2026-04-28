@@ -174,8 +174,8 @@ class SearchResult:
 We love contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide.
 
 ```bash
-git clone https://github.com/your-org/memoryos
-cd memoryos
+git clone https://github.com/NischalBhusal/MemoryOS
+cd MemoryOS
 pip install -e ".[dev]"
 pytest                  # run tests
 ruff check memoryos/    # lint
