@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "memoryos"
+version = "0.1.0"
+description = "A Local-First AI Memory Layer — persistent, semantic, fully offline."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+  { name = "MemoryOS Contributors" }
+]
+keywords = ["ai", "memory", "llm", "local", "offline", "sqlite", "embeddings", "rag"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Typing :: Typed",
+]
+dependencies = [
+  "sentence-transformers>=2.2.0",
+  "ollama>=0.1.0",
+  "numpy>=1.24.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-org/memoryos"
+Repository = "https://github.com/your-org/memoryos"
+"Bug Tracker" = "https://github.com/your-org/memoryos/issues"
+Changelog = "https://github.com/your-org/memoryos/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.4.0",
+  "pytest-cov>=4.0.0",
+  "mypy>=1.5.0",
+  "ruff>=0.4.0",
+]
+
+# ---------------------------------------------------------------------------
+# Tool configuration
+# ---------------------------------------------------------------------------
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+ignore_missing_imports = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "C4", "SIM"]
+ignore = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["memoryos"]
+
+[tool.coverage.run]
+source = ["memoryos"]
+omit = ["tests/*"]
