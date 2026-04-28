@@ -11,7 +11,7 @@ import sqlite3
 import threading
 import datetime
 from pathlib import Path
-from typing import Any, Optional
+from typing import Any, Dict, List, Optional
 
 from .exceptions import StorageError
 
@@ -107,7 +107,7 @@ class Storage:
     def insert(
         self,
         text: str,
-        vector: list[float],
+        vector: List[float],
         session_id: Optional[str] = None,
     ) -> int:
         """
@@ -136,7 +136,7 @@ class Storage:
         except sqlite3.Error as exc:
             raise StorageError(f"Failed to insert memory: {exc}") from exc
 
-    def get_all(self) -> list[Dict[str, Any]]:
+    def get_all(self) -> List[Dict[str, Any]]:
         """
         Retrieve every memory record.
 
@@ -156,7 +156,7 @@ class Storage:
         except sqlite3.Error as exc:
             raise StorageError(f"Failed to retrieve memories: {exc}") from exc
 
-    def get_by_session(self, session_id: str) -> list[Dict[str, Any]]:
+    def get_by_session(self, session_id: str) -> List[Dict[str, Any]]:
         """
         Retrieve all memories belonging to a specific session.
 
@@ -238,7 +238,7 @@ class Storage:
     # ------------------------------------------------------------------
 
     @staticmethod
-    def _row_to_dict(row: sqlite3.Row) -> dict[str, Any]:
+    def _row_to_dict(row: sqlite3.Row) -> Dict[str, Any]:
         """Convert a ``sqlite3.Row`` into a plain dict with deserialized vector."""
         return {
             "id": row["id"],
