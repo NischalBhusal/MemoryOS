@@ -10,7 +10,7 @@ weights from disk more than once per process.
 from __future__ import annotations
 
 import threading
-from typing import ClassVar, List
+from typing import ClassVar
 
 import numpy as np
 from sentence_transformers import SentenceTransformer
@@ -87,7 +87,7 @@ class LocalEmbeddings:
         except Exception as exc:
             raise EmbeddingError(f"Embedding failed for text '{text[:40]}…': {exc}") from exc
 
-    def embed_batch(self, texts: List[str]) -> np.ndarray:
+    def embed_batch(self, texts: list[str]) -> np.ndarray:
         """
         Encode a list of strings in optimised batches.
 
